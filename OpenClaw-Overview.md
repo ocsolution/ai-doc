@@ -1,3 +1,5 @@
+![OpenClaw](files/openclaw.jpeg)
+
 # OpenClaw Overview
 
 OpenClaw is essentially a self-hosted AI agent platform. What it can do depends on the skills, tools, and integrations you enable, but here is a comprehensive overview.
