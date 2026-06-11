@@ -142,6 +142,27 @@ OpenClaw can integrate with:
 
 ---
 
+# AI Provider Layer
+
+## Supported Providers
+
+### OpenAI
+- **Models:** GPT-4o, GPT-4.1, GPT-5
+
+### Anthropic
+- **Models:** Claude Sonnet, Claude Opus
+
+### Google
+- **Models:** Gemini Pro, Gemini Flash
+
+### DeepSeek
+- **Models:** DeepSeek Chat, DeepSeek Reasoner
+
+### Ollama (Local Models)
+- **Supported Models:** Llama, Gemma, Mistral, Qwen, DeepSeek
+
+---
+
 ## Things to Be Careful About
 
 Because OpenClaw can:
@@ -153,182 +174,4 @@ Because OpenClaw can:
 
 It should be configured carefully and kept updated. Security researchers have highlighted risks involving malicious skills and agent permissions if not properly managed.
 
-# AI Model Integrations Supported by OpenClaw
 
-OpenClaw can integrate with a wide range of AI providers and self-hosted models.
-
-## OpenAI
-
-- GPT-4o
-- GPT-4.1
-- GPT-4.1 Mini
-- GPT-5 (when available through API)
-- Embedding models
-- Reasoning models
-
-## Anthropic
-
-- Claude Opus
-- Claude Sonnet
-- Claude Haiku
-
-## Google
-
-- Gemini 2.5 Pro
-- Gemini 2.5 Flash
-- Gemini Flash Lite
-- Gemini Embeddings
-
-## xAI
-
-- Grok
-- Grok Vision Models
-
-## DeepSeek
-
-- DeepSeek Chat
-- DeepSeek Reasoner
-
-## Meta
-
-- Llama 3
-- Llama 4
-- Code Llama
-
-## Mistral AI
-
-- Mistral Large
-- Mistral Medium
-- Mistral Small
-- Codestral
-
-## Cohere
-
-- Command R
-- Command R+
-- Embed Models
-
-## Alibaba Cloud
-
-- Qwen
-- Qwen Coder
-- Qwen Vision Models
-
-## Microsoft
-
-- Azure OpenAI Models
-- Phi Models
-
-## Amazon
-
-- Amazon Nova Models
-- Amazon Bedrock Hosted Models
-
-## Bedrock Integrations
-
-OpenClaw can access models hosted through Amazon Bedrock:
-
-- Claude
-- Llama
-- Mistral
-- Nova
-- Cohere
-- AI21
-
-## Ollama (Local Models)
-
-- Llama 3
-- Llama 4
-- Gemma
-- DeepSeek
-- Mistral
-- Qwen
-- Phi
-- TinyLlama
-- CodeLlama
-- Any GGUF-compatible model
-
-## LM Studio
-
-- Any locally hosted model exposed through the OpenAI-compatible API
-
-## vLLM
-
-- High-performance self-hosted inference server
-- Supports many open-source LLMs
-
-## Hugging Face
-
-- Hosted Inference API
-- Self-hosted Transformers
-- Text Generation Inference (TGI)
-
-## Specialized Models
-
-### Coding
-
-- Claude Sonnet
-- Codestral
-- DeepSeek Coder
-- Code Llama
-- Qwen Coder
-
-### Vision
-
-- GPT-4o Vision
-- Gemini Vision
-- Claude Vision
-- Qwen VL
-- Llama Vision
-
-### Speech-to-Text
-
-- Whisper
-- Deepgram
-- AssemblyAI
-- Google Speech-to-Text
-
-### Text-to-Speech
-
-- OpenAI TTS
-- ElevenLabs
-- Azure Speech
-- Google Cloud TTS
-
-### Image Generation
-
-- DALL·E
-- Stable Diffusion
-- Flux
-- SDXL
-
-### Video Generation
-
-- Veo
-- Runway
-- Kling
-- Open-source video models
-
-## OpenAI-Compatible APIs
-
-OpenClaw can connect to virtually any provider exposing an OpenAI-compatible API, including:
-
-- OpenRouter
-- Together AI
-- Fireworks AI
-- Groq
-- Cerebras
-- Perplexity
-- Local AI gateways
-
-## Self-Hosted Models
-
-OpenClaw supports self-hosted deployments using:
-
-- Ollama
-- vLLM
-- LM Studio
-- Hugging Face TGI
-- Custom OpenAI-compatible endpoints
-
-This allows complete local and private AI deployments without sending data to third-party cloud providers.
