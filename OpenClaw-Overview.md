@@ -175,3 +175,71 @@ Because OpenClaw can:
 It should be configured carefully and kept updated. Security researchers have highlighted risks involving malicious skills and agent permissions if not properly managed.
 
 
+# OpenClaw + SQL Server Guide
+
+## 1. Summarize / Report on Data
+
+Once connected, just message OpenClaw naturally:
+
+- "Summarize orders by region for Q2 2026"
+- "Show me month-over-month revenue growth"
+- "Which customers haven't ordered in 90 days?"
+
+It inspects your schema first, then generates and runs the query, returning results as a formatted summary — no manual SQL needed.
+
+---
+
+## 2. Write SQL Queries
+
+Since you're advanced, OpenClaw can handle the heavy stuff:
+
+- CTEs, window functions, dynamic pivots
+- Stored procedure drafts
+- Index optimization suggestions
+- Query rewrites for performance
+
+Just describe what you need: *"Write a query ranking sales reps by monthly revenue using a window function, partitioned by region."*
+
+---
+
+## 3. Automate Scheduled Tasks
+
+This is where OpenClaw really shines. You can set up recurring jobs like:
+
+```
+Every Monday 8am   → run summary report        → send to Telegram/WhatsApp
+Every night        → check for anomalies        → alert me if found
+Every hour         → sync new orders            → to a reporting table
+```
+
+---
+
+## Setup: Connect SQL Server via MCP
+
+Add the following to `~/.openclaw/openclaw.json`:
+
+```json
+{
+  "mcpServers": {
+    "mssql": {
+      "command": "npx",
+      "args": ["-y", "mcp-node-mssql"],
+      "env": {
+        "DB_HOST": "your-server",
+        "DB_PORT": "1433",
+        "DB_USERNAME": "your-username",
+        "DB_PASSWORD": "your-password",
+        "DB_DATABASE": "your-database",
+        "DB_TRUST_SERVER_CERTIFICATE": "true",
+        "CONNECTION_TIMEOUT": "600000",
+        "REQUEST_TIMEOUT": "300000"
+      }
+    }
+  }
+}
+```
+
+Then restart the OpenClaw gateway — it will auto-discover your SQL Server tools.
+
+> **Security tip:** Never hardcode credentials. Use environment variables and restrict your DB host to `127.0.0.1` if running locally.
+
